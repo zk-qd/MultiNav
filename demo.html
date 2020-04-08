@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/multilevelNav.css">
+</head>
+
+<body>
+    <script src="../js/multilevelNav.js"></script>
+    <script>
+        var multilevelNavData = {
+            yz_map: {
+                logo: 1,
+                title: '永州市出租汽车监管平台',
+                children: [
+                    {
+                        dirname: 'monitor',
+                        name: '实时监测',
+                        children: [
+                            {
+                                filename: 'run',
+                                name: '实时运行情况',
+                            },
+                            {
+                                filename: 'searchtrack',
+                                name: '车辆轨迹查询',
+                            },
+                            {
+                                hidden: true,
+                                filename: 'test',
+                                name: '测试',
+                            },
+                        ]
+                    },
+                    {
+                        filename: 'monitor',
+                        name: '实时监测',
+                    },
+                ],
+            }
+        };
+        new MultiNav(document.body, multilevelNavData.yz_map).active('searchtrack');
+    </script>
+</body>
+
+</html>

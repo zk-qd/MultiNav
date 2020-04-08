@@ -1,0 +1,70 @@
+
+@fontSize: 15px;
+
+body {
+    background-color: #202020;
+}
+// wrapper
+.MultiNav-wrapper-css {
+    width: 100%;
+    height: 100%;
+
+    width: 300px;
+    height: 50px;
+    display: flex;
+    font-size: @fontSize;
+    font-family: '微软雅黑';
+}
+
+// 所有ul
+.MultiNav-wrapper-css .MultiNav-level-equal {
+    width: 100%;
+}
+
+// 一级菜单的ul
+.MultiNav-wrapper-css .MultiNav-level-first {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+}
+// 所有li标签
+.MultiNav-wrapper-css .MultiNav-li-equal {
+    flex: 1;
+    position: relative;
+}
+// 子级菜单的ul
+.MultiNav-wrapper-css .MultiNav-level-rest {
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+// 鼠标悬停 li
+.MultiNav-wrapper-css .MultiNav-off {
+    overflow: hidden;
+}
+.MultiNav-wrapper-css .MultiNav-off>h3 {
+    color: white;
+}
+// 鼠标离开 li
+.MultiNav-wrapper-css .MultiNav-on {
+    overflow: visible;
+}
+.MultiNav-wrapper-css .MultiNav-on>h3 {
+    color: green;
+}
+// 选中
+.MultiNav-wrapper-css h3.MultiNav-active {
+    color: green;
+}
+
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+h3 {
+    margin: 0;
+    font-weight: 400;
+}
